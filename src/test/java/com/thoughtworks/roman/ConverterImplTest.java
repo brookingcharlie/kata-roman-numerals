@@ -24,4 +24,10 @@ public class ConverterImplTest {
 		ConverterImpl converter = new ConverterImpl();
 		assertThat(converter.convert(2), is(equalTo("II")));
 	}
+
+	@Test
+	public void test3() {
+		ConverterImpl converter = new ConverterImpl();
+		assertThat(converter.convert(3), is(equalTo("III")));
+	}
 }
