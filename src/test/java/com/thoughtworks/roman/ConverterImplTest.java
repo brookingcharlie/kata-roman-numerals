@@ -42,4 +42,10 @@ public class ConverterImplTest {
 		ConverterImpl converter = new ConverterImpl();
 		assertThat(converter.convert(5), is(equalTo("V")));
 	}
+
+	@Test
+	public void test8() {
+		ConverterImpl converter = new ConverterImpl();
+		assertThat(converter.convert(8), is(equalTo("VIII")));
+	}
 }

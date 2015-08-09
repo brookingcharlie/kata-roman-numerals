@@ -7,14 +7,18 @@ public class ConverterImpl implements Converter {
 			throw new IllegalArgumentException();
 		}
 		StringBuilder out = new StringBuilder();
-		if (in == 5) {
-			return "V";
+		int r = in;
+		if (r >= 5) {
+			out.append("V");
+			r -= 5;
 		}
-		if (in == 4) {
-			return "IV";
+		else if (r == 4) {
+			out.append("IV");
+			r -= 4;
 		}
-		for (int i = in; i > 0; i--) {
+		while (r > 0) {
 			out.append("I");
+			r -= 1;
 		}
 		return out.toString();
 	}
