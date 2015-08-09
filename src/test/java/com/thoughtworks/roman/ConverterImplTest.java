@@ -18,4 +18,10 @@ public class ConverterImplTest {
 		ConverterImpl converter = new ConverterImpl();
 		assertThat(converter.convert("I"), is(equalTo(1)));
 	}
+
+	@Test
+	public void testII() {
+		ConverterImpl converter = new ConverterImpl();
+		assertThat(converter.convert("II"), is(equalTo(2)));
+	}
 }

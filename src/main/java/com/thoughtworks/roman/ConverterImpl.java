@@ -6,6 +6,9 @@ public class ConverterImpl implements Converter {
 		if (in.equals("I")) {
 			return 1;
 		}
+		if (in.equals("II")) {
+			return 2;
+		}
 		throw new IllegalArgumentException();
 	}
 }
