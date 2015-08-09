@@ -8,20 +8,20 @@ import org.junit.Test;
 
 public class ConverterImplTest {
 	@Test(expected=IllegalArgumentException.class)
-	public void testIllegalArgument() {
+	public void test0() {
 		ConverterImpl converter = new ConverterImpl();
-		converter.convert("");
+		converter.convert(0);
 	}
 
 	@Test
-	public void testI() {
+	public void test1() {
 		ConverterImpl converter = new ConverterImpl();
-		assertThat(converter.convert("I"), is(equalTo(1)));
+		assertThat(converter.convert(1), is(equalTo("I")));
 	}
 
 	@Test
-	public void testII() {
+	public void test2() {
 		ConverterImpl converter = new ConverterImpl();
-		assertThat(converter.convert("II"), is(equalTo(2)));
+		assertThat(converter.convert(2), is(equalTo("II")));
 	}
 }

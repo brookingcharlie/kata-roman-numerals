@@ -1,5 +1,5 @@
 package com.thoughtworks.roman;
 
 public interface Converter {
-	int convert(String in) throws IllegalArgumentException;
+	String convert(int in) throws IllegalArgumentException;
 }

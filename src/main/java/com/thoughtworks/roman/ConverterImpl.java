@@ -2,12 +2,12 @@ package com.thoughtworks.roman;
 
 public class ConverterImpl implements Converter {
 	@Override
-	public int convert(String in) throws IllegalArgumentException {
-		if (in.equals("I")) {
-			return 1;
+	public String convert(int in) throws IllegalArgumentException {
+		if (in == 1) {
+			return "I";
 		}
-		if (in.equals("II")) {
-			return 2;
+		if (in == 2) {
+			return "II";
 		}
 		throw new IllegalArgumentException();
 	}
