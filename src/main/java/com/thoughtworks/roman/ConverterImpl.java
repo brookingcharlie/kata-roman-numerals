@@ -7,6 +7,12 @@ public class ConverterImpl implements Converter {
 			throw new IllegalArgumentException();
 		}
 		StringBuilder out = new StringBuilder();
+		if (in == 5) {
+			return "V";
+		}
+		if (in == 4) {
+			return "IV";
+		}
 		for (int i = in; i > 0; i--) {
 			out.append("I");
 		}

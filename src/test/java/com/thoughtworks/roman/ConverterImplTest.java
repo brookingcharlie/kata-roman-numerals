@@ -30,4 +30,16 @@ public class ConverterImplTest {
 		ConverterImpl converter = new ConverterImpl();
 		assertThat(converter.convert(3), is(equalTo("III")));
 	}
+
+	@Test
+	public void test4() {
+		ConverterImpl converter = new ConverterImpl();
+		assertThat(converter.convert(4), is(equalTo("IV")));
+	}
+
+	@Test
+	public void test5() {
+		ConverterImpl converter = new ConverterImpl();
+		assertThat(converter.convert(5), is(equalTo("V")));
+	}
 }
