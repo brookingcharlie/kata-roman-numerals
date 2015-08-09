@@ -48,4 +48,16 @@ public class ConverterImplTest {
 		ConverterImpl converter = new ConverterImpl();
 		assertThat(converter.convert(8), is(equalTo("VIII")));
 	}
+
+	@Test
+	public void test9() {
+		ConverterImpl converter = new ConverterImpl();
+		assertThat(converter.convert(9), is(equalTo("IX")));
+	}
+
+	@Test
+	public void test10() {
+		ConverterImpl converter = new ConverterImpl();
+		assertThat(converter.convert(10), is(equalTo("X")));
+	}
 }

@@ -8,11 +8,19 @@ public class ConverterImpl implements Converter {
 		}
 		StringBuilder out = new StringBuilder();
 		int r = in;
+		if (r >= 10) {
+			out.append("X");
+			r -= 10;
+		}
+		if (r == 9) {
+			out.append("IX");
+			r -= 9;
+		}
 		if (r >= 5) {
 			out.append("V");
 			r -= 5;
 		}
-		else if (r == 4) {
+		if (r == 4) {
 			out.append("IV");
 			r -= 4;
 		}
