@@ -8,7 +8,7 @@ public class ConverterImpl implements Converter {
 		}
 		StringBuilder out = new StringBuilder();
 		int r = in;
-		if (r >= 10) {
+		while (r >= 10) {
 			out.append("X");
 			r -= 10;
 		}

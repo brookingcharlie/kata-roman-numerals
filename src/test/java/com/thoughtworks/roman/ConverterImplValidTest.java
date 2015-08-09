@@ -31,7 +31,8 @@ public class ConverterImplValidTest {
 			{5, "V"},
 			{8, "VIII"},
 			{9, "IX"},
-			{10, "X"}
+			{10, "X"},
+			{30, "XXX"}
 		});
 	}
 
