@@ -34,6 +34,7 @@ public class ConverterImplValidTest {
 			{10, "X"},
 			{30, "XXX"},
 			{40, "XL"},
+			{42, "XLII"},
 			{50, "L"},
 			{70, "LXX"}
 		});

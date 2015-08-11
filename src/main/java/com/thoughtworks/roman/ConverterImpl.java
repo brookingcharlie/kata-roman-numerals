@@ -12,7 +12,7 @@ public class ConverterImpl implements Converter {
 			out.append("L");
 			r -= 50;
 		}
-		if (r == 40) {
+		while (r >= 40) {
 			out.append("XL");
 			r -= 40;
 		}
@@ -20,7 +20,7 @@ public class ConverterImpl implements Converter {
 			out.append("X");
 			r -= 10;
 		}
-		if (r == 9) {
+		while (r >= 9) {
 			out.append("IX");
 			r -= 9;
 		}
@@ -28,7 +28,7 @@ public class ConverterImpl implements Converter {
 			out.append("V");
 			r -= 5;
 		}
-		if (r == 4) {
+		while (r >= 4) {
 			out.append("IV");
 			r -= 4;
 		}
