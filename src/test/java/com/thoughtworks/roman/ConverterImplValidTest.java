@@ -21,7 +21,7 @@ public class ConverterImplValidTest {
 	@Parameter(1)
 	public String expected;
 
-	@Parameters
+	@Parameters(name = "{0} returns {1}")
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] {
 			{1, "I"},
@@ -46,7 +46,7 @@ public class ConverterImplValidTest {
 	}
 
 	@Test
-	public void test1() {
+	public void test() {
 		ConverterImpl converter = new ConverterImpl();
 		assertThat(converter.convert(in), is(equalTo(expected)));
 	}
