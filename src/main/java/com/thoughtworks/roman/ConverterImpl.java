@@ -8,6 +8,14 @@ public class ConverterImpl implements Converter {
 		}
 		StringBuilder out = new StringBuilder();
 		int r = in;
+		while (r >= 50) {
+			out.append("L");
+			r -= 50;
+		}
+		if (r == 40) {
+			out.append("XL");
+			r -= 40;
+		}
 		while (r >= 10) {
 			out.append("X");
 			r -= 10;

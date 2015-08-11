@@ -32,7 +32,10 @@ public class ConverterImplValidTest {
 			{8, "VIII"},
 			{9, "IX"},
 			{10, "X"},
-			{30, "XXX"}
+			{30, "XXX"},
+			{40, "XL"},
+			{50, "L"},
+			{70, "LXX"}
 		});
 	}
 
