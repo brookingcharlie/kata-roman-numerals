@@ -1,7 +1,10 @@
 package com.thoughtworks.roman;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 
 public class ConverterImpl implements Converter {
 	private final List<Rule> rules = Arrays.asList(
@@ -20,13 +23,13 @@ public class ConverterImpl implements Converter {
 			throw new IllegalArgumentException();
 		}
 		StringBuilder out = new StringBuilder();
-		int r = in;
-		for (Rule rule : rules) {
-			while (r >= rule.getSize()) {
-				out.append(rule.getText());
-				r -= rule.getSize();
-			}
-		}
+		BiFunction<Integer, Rule, Integer> applyRule = (balance, rule) -> {
+			List<String> nText = Collections.nCopies(balance / rule.getSize(), rule.getText());
+			out.append(String.join("", nText));
+			return balance % rule.getSize();
+		};
+		BinaryOperator<Integer> reduceBalance = (balance, reduction) -> balance - reduction;
+		rules.stream().reduce(in, applyRule, reduceBalance);
 		return out.toString();
 	}
 }
