@@ -14,7 +14,7 @@ import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
-public class ConverterImplValidTest {
+public class ValidConverterTests {
 	@Parameter(0)
 	public int in;
 
@@ -47,7 +47,7 @@ public class ConverterImplValidTest {
 
 	@Test
 	public void test() {
-		ConverterImpl converter = new ConverterImpl();
+		Converter converter = new Converter();
 		assertThat(converter.convert(in), is(equalTo(expected)));
 	}
 }
