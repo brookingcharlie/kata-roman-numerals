@@ -24,7 +24,7 @@ public class ConverterImpl implements Converter {
 			out.append("IX");
 			r -= 9;
 		}
-		if (r >= 5) {
+		while (r >= 5) {
 			out.append("V");
 			r -= 5;
 		}
@@ -32,7 +32,7 @@ public class ConverterImpl implements Converter {
 			out.append("IV");
 			r -= 4;
 		}
-		while (r > 0) {
+		while (r >= 1) {
 			out.append("I");
 			r -= 1;
 		}
