@@ -8,6 +8,12 @@ import java.util.function.BinaryOperator;
 
 public class ConverterImpl implements Converter {
 	private final List<Rule> rules = Arrays.asList(
+		new Rule(1000, "M"),
+		new Rule(900, "CM"),
+		new Rule(500, "D"),
+		new Rule(400, "CD"),
+		new Rule(100, "C"),
+		new Rule(90, "XC"),
 	    new Rule(50, "L"),
 	    new Rule(40, "XL"),
 	    new Rule(10, "X"),

@@ -36,7 +36,12 @@ public class ConverterImplValidTest {
 			{40, "XL"},
 			{42, "XLII"},
 			{50, "L"},
-			{70, "LXX"}
+			{70, "LXX"},
+			{94, "XCIV"},
+			{369, "CCCLXIX"},
+			{448, "CDXLVIII"},
+			{1998, "MCMXCVIII"},
+			{2751, "MMDCCLI"}
 		});
 	}
 
