@@ -47,7 +47,6 @@ public class ValidConverterTests {
 
 	@Test
 	public void test() {
-		Converter converter = new Converter();
-		assertThat(converter.convert(in), is(equalTo(expected)));
+		assertThat(Converter.convert(in), is(equalTo(expected)));
 	}
 }

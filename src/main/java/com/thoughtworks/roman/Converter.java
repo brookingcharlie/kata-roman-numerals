@@ -7,7 +7,7 @@ import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 
 public class Converter {
-	private final List<Rule> rules = Arrays.asList(
+	private static final List<Rule> rules = Arrays.asList(
 		new Rule(1000, "M"),
 		new Rule(900, "CM"),
 		new Rule(500, "D"),
@@ -23,7 +23,7 @@ public class Converter {
 	    new Rule(1, "I")
     );
 
-	public String convert(int in) throws IllegalArgumentException {
+	public static String convert(int in) throws IllegalArgumentException {
 		if (in == 0) {
 			throw new IllegalArgumentException();
 		}
